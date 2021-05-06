@@ -57,7 +57,7 @@ namespace Datatable2List
                 lista.Add(prod);
             }
             difference = DateTime.UtcNow.Subtract(inicio);
-            Console.WriteLine(string.Format("\nLista: {0:n0} registros...", lista.Count));
+            Console.WriteLine(string.Format("\nLista: {0:n0} registros", lista.Count));
             Console.WriteLine("Foreach: " + difference);
 
             lista = new List<Produto>();
@@ -70,7 +70,7 @@ namespace Datatable2List
                          Preco = (double)produto["preco"]
                      }).ToList();
             difference = DateTime.UtcNow.Subtract(inicio);
-            Console.WriteLine(string.Format("\nLista: {0:n0} registros...", lista.Count));
+            Console.WriteLine(string.Format("\nLista: {0:n0} registros", lista.Count));
             Console.WriteLine("Linq...: " + difference);
 
 
@@ -84,7 +84,7 @@ namespace Datatable2List
                          Preco = (double)produto["preco"]
                      }).ToList();
             difference = DateTime.UtcNow.Subtract(inicio);
-            Console.WriteLine(string.Format("\nLista: {0:n0} registros...", lista.Count));
+            Console.WriteLine(string.Format("\nLista: {0:n0} registros", lista.Count));
             Console.WriteLine("PLinq..: " + difference);
 
             if (semargs) 
